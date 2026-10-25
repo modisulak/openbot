@@ -593,36 +593,3 @@ image to `ghcr.io/nightly-labs/openbot`.
 Installed builds check GitHub Releases for updates and expose download/restart controls in the account
 popover. Release signing secrets and the complete procedure are documented in
 [docs/RELEASING.md](docs/RELEASING.md).
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md). Before we merge a contribution, each
-author from outside the organization signs the [Contributor Assignment Agreement](CLA.md), which
-assigns its copyright to Synthetify Labs. Community behavior is governed by the
-[Code of Conduct](CODE_OF_CONDUCT.md).
-
-## License and attribution
-
-Copyright 2026 Synthetify Labs spółka z ograniczoną odpowiedzialnością.
-
-Licensed under the [PolyForm Noncommercial License 1.0.0](LICENSE). You may use, modify, and
-distribute the code for permitted noncommercial purposes. Commercial use requires a separate license
-from the copyright owner. For a commercial license, contact
-[licenses@openbot.run](mailto:licenses@openbot.run). Versions up to and including 0.1.11 remain
-available under Apache-2.0.
-See [NOTICE](NOTICE) for attribution and third-party notices.
-
-OpenBot is an independent source-available project and is not affiliated with, endorsed by, or
-sponsored by OpenAI. OpenAI, ChatGPT, and Codex are used only to describe compatibility with their
-respective products and services.
-
-### Shared macOS hosts
-
-For one native Standard user per tenant, install the normal OpenBot DMG and the optional
-`OpenBot-Host-<VERSION>-arm64.pkg` from the same release. The Host package provides
-`sudo openbot-host setup --create-user client-acme --create-user client-bravo` and
-`sudo openbot-host verify`. `sudo openbot-host status [--json]` and `sudo openbot-host watch`
-show the update phase, the staged version, and each tenant's work state. No Git checkout, Bun,
-or compilation is required on the host.
-Normal desktop users need only the DMG. See the [host deployment guide](docs/multi-tenant-hosting.md)
-for existing-user enrollment, password handling, package upgrades, and required target-host checks.
